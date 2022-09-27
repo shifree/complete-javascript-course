@@ -23,6 +23,7 @@ let y = 100;
 console.log(x--);
 console.log(--y);
 */
+/*
 // get bmi
 let bmi;
 let mass;
@@ -43,4 +44,20 @@ console.log(`1st line \n\
 
 console.log(` 1st line
 2nd line
-3rd line`)
+3rd line`)*/
+/*
+const age = Number(prompt("what's your age?"))
+console.log(age);
+console.log(typeof age);
+if (age > 18) {
+    console.log(`your age is ${age}, you are an adult`);
+} else {
+    console.log('you are not an adult');
+}*/
+/*
+const year = 10;
+const drink = year >= 18 ? "drink wine" : "drink water";
+console.log(drink)
+console.log(` I like to ${year >= 18 ? "drink wine" : "drink water"}`);*/
+const age = 62;
+console.log(`I am an/a ${age > 60 ? "old man" : age > 40 ? "middle man" : age > 20 ? "young man" : "children"}`);
