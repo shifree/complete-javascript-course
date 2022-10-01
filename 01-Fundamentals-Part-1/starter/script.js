@@ -61,3 +61,44 @@ console.log(drink)
 console.log(` I like to ${year >= 18 ? "drink wine" : "drink water"}`);*/
 const age = 62;
 console.log(`I am an/a ${age > 60 ? "old man" : age > 40 ? "middle man" : age > 20 ? "young man" : "children"}`);
+// loose 
+if (18 == '18') console.log('loose equal')
+// strict
+if (18 === '18') console.log('strict equal')
+if (18 === Number('18')) console.log('convert to Number strict equal')
+
+if (18 != '18') console.log('loose unequal')
+if (18 !== '18') console.log('strict unequal')
+if (1 == true) console.log('1 == true')
+if (1 === true) console.log('1 ===true')
+//Boolean
+result1 = true & true// 与运算，结果为number
+console.log(result1)
+console.log(typeof result1)//结果为number
+result2 = true && true//比较
+console.log(result2)//结果为布尔变量
+console.log(!true)
+console.log(typeof (!true & false))
+/* switch */
+const day = 'tuesday';
+switch (day) {
+    case 'monday': console.log('monday');
+        break;
+    case 'tuesday':
+        console.log('tue');
+    case 'wednesday':
+        console.log('wed');
+        break;
+    case 'thursday':
+        console.log('thu');
+    default:
+        console.log('default')
+}
+/*027 statements and expressions */
+// if... else ... ==>> statement
+// 2+4 ==>> expression
+
+/**028 the conditional operator */
+const myage = 23;
+myage >= 18 ? console.log('I like to drink wine') : console.log('I like to drink water');
+console.log(myage - 7 >= 18 ? 'wine' : "water")
