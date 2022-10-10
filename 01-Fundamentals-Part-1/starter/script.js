@@ -107,3 +107,6 @@ console.log(myage - 7 >= 18 ? 'wine' : "water")
 const bil = prompt('enter the bill');
 const tip = bil <= 50 ? bil * .2 : bil <= 200 ? bil * .15 : bil * .1;
 console.log(`the bill will be ${bil} and the tip will be ${tip}`);
+
+/**030 */
+/**031 */
