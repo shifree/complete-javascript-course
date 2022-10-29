@@ -114,3 +114,70 @@ pr(calcAverage(3, 4, 5));
 
 //**039 array */
 // to do...
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+const friends = ['Michael', 'Steven', 'Peter'];
+pr(friends);
+
+const years = new Array(1991, 1984, 2008, 2020);
+
+pr(friends[0]);
+
+pr(friends.length);
+// 虽然数组array是const，但是数组元素仍然可以赋值
+friends[2] = 'Jay';
+pr(friends);
+//以上的原因是数组对象存储的是地址，而非值，所以对数组的元素进行赋值不改变地址，如下，则不行：
+/*
+friends = ['Tom', 'Jerry', 'Paul']
+pr(friends)
+*/
+// 040**//
+pr(friends.length);
+//Array尾部插入，返回数组长度
+const newLengthoffriends = friends.push('Jack');
+pr(newLengthoffriends);
+//Array头部插入，返回数组长度
+const newLengthoffriends2 = friends.unshift('John');
+pr(friends);
+pr(newLengthoffriends2);
+
+//pop 删除尾部，返回pop的尾部元素
+pr(friends.pop());
+pr(friends);
+//删除头部，返回shift掉的头部元素
+pr(friends.shift());
+pr(friends);
+
+const index1 = friends.indexOf('Steven');
+pr(`index of Steven is ${index1}`);
+
+
+//042 objects//
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2022 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    height: 188,
+    weight: 80
+}
+//对象元素取值的两个方式
+pr(jonas.lastName);
+pr(jonas['lastName']);
+
+//对象元素的取值
+const interestedIn = prompt('What do you want to know about jonas?job,  friends, height');
+pr(jonas[interestedIn]);
+pr(jonas);//此处输出的内容包括location和twitter。原因可能程序已经编译了，对象地址中已经有了location和twitter
+pr(jonas.location);//在下面定义，所以此处输出undifined
+pr('1756');
+//*
+//对象元素赋值
+jonas.location = 'usa';
+jonas['twitter'] = '@jonasschmedtman';
+pr(jonas);
+//*/
