@@ -181,3 +181,55 @@ jonas.location = 'usa';
 jonas['twitter'] = '@jonasschmedtman';
 pr(jonas);
 //*/
+
+//043 dot //
+//对象内的顺序no matter//
+
+pr(jonas.lastName);
+pr(jonas['lastName']);
+
+const interestedIn2 = prompt("please choose one of jonas' interest");
+if (jonas[interestedIn2]) {
+    pr(jonas[interestedIn2]);
+} else {
+    pr('wrong request!')
+}
+
+//044 object methods
+const jonas3 = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2022 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    height: 188,
+    weight: 80,
+    calcAge2: function (birthYear) {
+        return 2022 - birthYear;
+    }
+}
+pr(jonas3.calcAge2(40));
+pr(jonas3['calcAge2'](40))
+
+
+const jonas4 = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2022 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    height: 188,
+    weight: 80,
+    birthYear: 1980,
+    calcAge2: function (birthYear) {
+        return 2022 - birthYear;
+
+    },
+    calcAge4: function () {
+        return 2022 - this.birthYear;
+    }
+}
+pr(jonas4.calcAge4());
+pr(jonas4['calcAge4']());
+
+//045
